@@ -16,7 +16,7 @@ app.get("/top-headlines", (req, res) => {
     page = 1;
     pageSize = 80;
   }
-  let url = `https://newsapi.org/v2/top-headlines?category=${category}&language=en&page=${page}&pageSize=${pageSize}&apiKey=${process.env.API_KEY}`;
+  let url = `https://newsapi.org/v2/everything?q=${category}&language=en&page=${page}&pageSize=${pageSize}&apiKey=${process.env.API_KEY}`;
   axios
     .get(url)
     .then((response) => {
